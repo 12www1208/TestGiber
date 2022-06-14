@@ -1,0 +1,351 @@
+@charset "UTF-8";
+/*mixin------------------------------------------------*/
+/*Color--------------------------------*/
+/*fonts-----------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+/*Основы------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*animations--------------------------*/
+@keyframes faid {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes nevbar__fixed {
+  0% {
+    opacity: 0;
+    top: -50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/*modules-------------------------*/
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: 1s all;
+  opacity: 1;
+  z-index: 99;
+}
+.preloader.done {
+  opacity: 0;
+  display: none;
+}
+.preloader .loader {
+  width: 75px;
+  height: 75px;
+  border: 10px solid;
+  border-color: #404eed;
+  border-radius: 50%;
+  border-top-color: #000;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  animation: spin 2s infinite linear;
+}
+
+.nevbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  background-color: #5EA6FF;
+  justify-content: space-between;
+  align-items: center;
+}
+.nevbar .nevbar__logo {
+  padding-left: 20px;
+}
+.nevbar .nevbar__logo h1 {
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+.nevbar .nevbar__menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.nevbar .nevbar__menu li a {
+  font-size: 20px;
+  font-family: "Roboto Slab", serif;
+  color: white;
+}
+.nevbar .nevbar__menu li a:hover {
+  color: #603333;
+}
+.nevbar .zhod img {
+  width: 40px;
+  height: 40px;
+  padding-right: 20px;
+}
+.nevbar.scroll__fixed {
+  position: fixed;
+  top: 0;
+  animation: nevbar__fixed linear 0.6s;
+  z-index: 80;
+}
+
+#header {
+  width: 100%;
+  height: 700px;
+  background-color: #2952BE;
+}
+#header .header__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#header .header__content .header__text {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#header .header__content .header__text .header__logo {
+  text-align: center;
+}
+#header .header__content .header__text .header__logo h2 {
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+#header .header__content .header__text .header__logo p {
+  font-size: 25px;
+  padding-top: 20px;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+#header .header__content .header__text .header__menu {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+#header .header__content .header__text .header__menu button {
+  width: 100px;
+  height: 40px;
+  background-color: #FEB370;
+  border: none;
+  border-radius: 10px;
+}
+#header .header__content .header__text .header__menu button:hover {
+  background-color: #2a52be;
+}
+#header img {
+  width: 300px;
+  height: 300px;
+}
+
+#main {
+  width: auto;
+  height: auto;
+}
+#main .usPrgect {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+#main .usPrgect .usPrgect__text {
+  text-align: center;
+}
+#main .usPrgect .usPrgect__text h2 {
+  color: #0000ff;
+  font-family: "Roboto Slab", serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#main .usPrgect .swiper {
+  width: 100%;
+  height: 890px;
+}
+#main .usPrgect .swiper #s1 {
+  background-image: url("../img/moreclick.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#main .usPrgect .swiper #s2 {
+  background-image: url("../img/progect_2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#main .usPrgect .swiper .swiper-slide {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#main .usPrgect .swiper .swiper-slide h2 {
+  font-family: "Roboto Slab", serif;
+  color: white;
+  font-size: 30px;
+}
+#main .usPrgect .swiper .swiper-slide .items__text {
+  width: 550px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#main .usPrgect .swiper .swiper-slide .items__text p {
+  font-size: 20px;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+#main .usPrgect .swiper .swiper-slide .items__text button {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+}
+#main .usPrgect .swiper .swiper-slide .items__text button:hover {
+  background-color: #2a52be;
+}
+#main .usPrgect .swiper-button-prev:hover {
+  color: white;
+}
+#main .usPrgect .swiper-button-next:hover {
+  color: white;
+}
+#main .aboutUs {
+  width: 100%;
+  height: 1650px;
+  background-color: #2952BE;
+  text-align: center;
+}
+#main .aboutUs h2 {
+  padding-top: 20px;
+  font-family: "Roboto Slab", serif;
+  color: white;
+}
+#main .aboutUs img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#main .aboutUs p {
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto Slab";
+}
+#main .aboutUs .au {
+  width: auto;
+  height: auto;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main .aboutUs .au .au__text {
+  width: 350px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 50px;
+}
+#main .wished {
+  width: auto;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#main .wished h1 {
+  color: #0000ff;
+  font-family: "Roboto Slab", serif;
+}
+#main .wished .formB h2 {
+  color: #5EA6FF;
+  font-family: "Roboto Slab", serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#main .wished .formB input[type=text] {
+  width: 500px;
+  height: 30px;
+}
+#main .wished button {
+  width: 80px;
+  height: 50px;
+  background-color: #FEB370;
+  font-family: "Roboto Slab", serif;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#footer {
+  width: 100%;
+  height: 100px;
+  background-color: #5EA6FF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer img {
+  width: 100px;
+  height: 100px;
+  padding-left: 20px;
+}
+#footer .footer__logo {
+  display: flex;
+  align-items: center;
+}
+#footer .footer__logo h1 {
+  padding-left: 20px;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+#footer p {
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+#scrollTopButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  z-index: 80;
+  right: 30px;
+  border: none;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #979797;
+}

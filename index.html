@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test Giber</title>
+	<link rel="stylesheet" href="modules/swiper/swiper-bundle.min.css"/>
+	<link rel="icon" type="image/ico" href="img/favicon.ico" />
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div class="main-canteiner">
+		<div class="preloader">
+			<div class="loader"></div>
+		</div>
+		<div class="nevbar">
+			<div class="nevbar__logo">
+				<h1>Test Giber</h1>
+			</div>
+			<div class="nevbar__menu">
+				<ul>
+					<li><a href="#header">Главная</a></li>
+					<li><a href="#usPrgect">Проекты</a></li>
+					<li><a href="#aboutUs">О нас</a></li>
+				</ul>
+			</div>
+			<a class="zhod" href="https://discord.gg/YsZKuvb2ch"><img src="img/discord_icon_130958.svg" alt=""></a>
+		</div>
+		<header id="header">
+			<a name="header"></a>
+			<div class="header__content">
+				<img class="header__img" src="img/TestGiber.png" alt="">
+				<div class="header__text">
+					<div class="header__logo">
+						<h2>TestGiber</h2>
+						<p>Это компания в которой люди делают "Интересные" игры</p>
+					</div>
+					<div class="header__menu">
+						<button onclick="location.href='#aboutUs'">Узнать больше</button></li>
+					<button onclick="location.href='#usPrgect'">Увидеть наши проекты</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			<div class="usPrgect">
+				<div class="usPrgect__text">
+					<a name="usPrgect"></a>
+					<h2>Наши проекты</h2>
+				</div>
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div id="s1" class="swiper-slide">
+							<h2>More Click</h2>
+							<div class="items__text">
+								<p>Это игра-кликер где вам придётся кликать. Вот и вся цель игры.</p>
+								<button onclick="location.href='game/MoreClikc/moreclick.html'">Играть</button>
+							</div>
+						</div>
+						<div id="s2" class="swiper-slide">
+							<h2>Flying quest</h2>
+							<div class="items__text">
+								<p>Это квест в котором вам придется думать, чтобы выбраться из странной реальности</p>
+								<button onclick="location.href='game/MoreClikc/moreclick.html'">Играть</button>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+			<div class="aboutUs">
+				<a name="aboutUs"></a>
+				<h2>О нас</h2>
+				<div class="au">
+					<img src="img/vic.jpg" alt="">
+					<div class="au__text">
+						<h2>Mihalich</h2>
+						<p>А что мне думать? Хорошие знакомые, которые делают одно дело</p>
+					</div>
+				</div>
+				<div class="au">
+					<img src="img/son.webp" alt="">
+					<div class="au__text">
+						<h2>Sapphire</h2>
+						<p>Лично для меня это компания хороших людей с которыми можно повеселиться. Да и пока что мне нравится моя "должность" редактора и дизайнера</p>
+					</div>
+				</div>
+				<div class="au">
+					<img src="img/Vova.webp" alt="">
+					<div class="au__text">
+						<h2>Hayate Uchiha</h2>
+						<p>Группа друзей, стремящихся к одной цели, цель которых - создать что ни-будь хорошее и интересное</p>
+					</div>
+				</div>
+				<div class="au">
+					<img src="img/den.png" alt="">
+					<div class="au__text">
+						<h2>Den4ik</h2>
+						<p>Сидишь не чего не делаешь. они делают всё сами</p>
+					</div>
+				</div>
+				<div class="au">
+					<img src="img/Karter.webp" alt="">
+					<div class="au__text">
+						<h2>Karter</h2>
+						<p>Как по мне это лучшее место для того чтобы программировать сайты ведь рядом с тобой лучшие люди</p>
+					</div>
+				</div>
+			</div>
+			<div class="wished">
+				<h1>Оставте ваши пожелания</h1>
+				<form id="tg">
+					<div class="formB">
+						<h2>Имя</h2>
+						<input name="name" class="fromName" type="text">
+					</div>
+					<div class="formB">
+						<h2>Пожелания</h2>
+						<textarea class="fromTex" name="poz" cols="80" rows="10"></textarea>
+					</div>
+					<button type="submit">Отправить</button>
+				</form>
+			</div>
+		</main>
+		<footer id="footer">
+			<div class="footer__logo">
+				<img src="img/TestGiber.png" alt="">
+				<h1>Test Giber</h1>
+			</div>
+			<p>2022 Все права защищены</p>
+		</footer>
+			<button id="scrollTopButton">Top</button>
+	</div>
+	<script src="modules/axios/dist/axios.min.js"></script>
+	<script src="modules/swiper/swiper-bundle.min.js"></script>
+	<script src="modules/animejs/lib/anime.min.js"></script>
+	<script src="scripts/index.js"></script>
+</body>
+</html>
